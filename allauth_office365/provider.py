@@ -37,7 +37,6 @@ class Office365Provider(OAuth2Provider):
             email = None
 
         return dict(email=email,
-                    username=data.get(self.get_settings().get('USERNAME_FIELD', 'displayName')),
                     last_name=data.get('surname'),
                     first_name=data.get('givenName'))
 

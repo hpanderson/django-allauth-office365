@@ -33,7 +33,7 @@ class SocialAccountAdapter(DefaultSocialAccountAdapter):
 
         false_keys = ["is_staff", "is_superuser"]
         boolean_keys = false_keys + ["is_active"]
-        copy_keys = boolean_keys + ["first_name", "last_name", "email", "username"]
+        copy_keys = boolean_keys + ["first_name", "last_name", "email"]
 
         if sociallogin is not None and sociallogin.account.provider == Office365Provider.id:
             data = sociallogin.account.extra_data
